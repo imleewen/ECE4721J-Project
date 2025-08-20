@@ -1,0 +1,71 @@
+{
+  "namespace": "com.p1",
+  "type": "record",
+  "name": "H5Fields",
+  "fields": [
+    // "/analysis/bars_confidence"
+    {"name": "bars_confidence_mean",  "type": ["null", "double"], "doc": "mean of bars confidence measure"},
+    {"name": "bars_confidence_std",  "type": ["null", "double"], "doc": "standard deviation of bars confidence measure"},
+    {"name": "bars_confidence_max",  "type": ["null", "double"], "doc": "max values of bars confidence measure"},
+
+    // "/analysis/beats_confidence"
+    {"name": "beats_confidence_mean",  "type": ["null", "double"], "doc": "mean of beats confidence measure"},
+    {"name": "beats_confidence_std",  "type": ["null", "double"], "doc": "standard deviation of beats confidence measure"},
+    {"name": "beats_confidence_max",  "type": ["null", "double"], "doc": "max values of beats confidence measure"},
+
+    // "/analysis/sections_confidence"
+    {"name": "sections_confidence_mean",  "type": ["null", "double"], "doc": "mean of sections confidence measure"},
+    {"name": "sections_confidence_std",  "type": ["null", "double"], "doc": "standard deviation of sections confidence measure"},
+    {"name": "sections_confidence_max",  "type": ["null", "double"], "doc": "max values of sections confidence measure"},
+
+    // "/analysis/segments_confidence"
+    {"name": "segments_confidence_mean",  "type": ["null", "double"], "doc": "mean of segments confidence measure"},
+    {"name": "segments_confidence_std",  "type": ["null", "double"], "doc": "standard deviation of segments confidence measure"},
+    {"name": "segments_confidence_max",  "type": ["null", "double"], "doc": "max values of segments confidence measure"},
+
+    // "/analysis/segments_loudness_max"
+    {"name": "segments_loudness_max_mean",  "type": ["null", "double"], "doc": "mean of max dB values over all segments"},
+    {"name": "segments_loudness_max_std",  "type": ["null", "double"], "doc": "standard deviation of max dB values over all segments"},
+
+    // "/analysis/segments_pitches"
+    {"name": "segments_pitches", "type": ["null", {"type": "array", "items": "double"}], "doc": "chroma feature, one value per note"},
+
+    // "/analysis/segments_timbre"
+    {"name": "segments_timbre", "type": ["null", {"type": "array", "items": "double"}], "doc": "texture features (MFCC+PCA-like)"},
+    
+    // "/analysis/tatums_confidence"
+    {"name": "tatums_confidence_mean",  "type": ["null", "double"], "doc": "mean of tatums confidence measure"},
+    {"name": "tatums_confidence_std",  "type": ["null", "double"], "doc": "standard deviation of tatums confidence measure"},
+    {"name": "tatums_confidence_max",  "type": ["null", "double"], "doc": "max values of tatums confidence measure"},
+
+    // "/analysis/songs"
+    {"name": "analysis_sample_rate", "type": ["int", "null"], "doc": "sample rate of the audio used"},
+    {"name": "danceability", "type": ["double", "null"], "doc": "0-1 score"},
+    {"name": "duration", "type": ["double", "null"], "doc": "Seconds"},
+    {"name": "end_of_fade_in", "type": ["double", "null"], "doc": "seconds at the beginning of the song"},
+    {"name": "energy", "type": ["double", "null"], "doc": "0-1 intensity"},
+    {"name": "key", "type": ["int", "null"], "doc": "key the song is in"},
+    {"name": "key_confidence", "type": ["double", "null"], "doc": "key_confidence"},
+    {"name": "loudness", "type": ["double", "null"], "doc": "overall loudness in dB"},
+    {"name": "mode", "type": ["int", "null"], "doc": "major or minor"},
+    {"name": "mode_confidence", "type": ["double", "null"]},
+    {"name": "start_of_fade_out", "type": ["double", "null"], "doc": "in Seconds"},
+    {"name": "tempo", "type": ["double", "null"], "doc": "in BPM"},
+    {"name": "time_signature", "type": ["int", "null"], "doc": "estimate of number of beats per bar, e.g. 4"},
+    {"name": "time_signature_confidence", "type": ["double", "null"], "doc": "confidence measure"},
+
+    // "/metadata/songs"
+    {"name": "artist_7digitalid", "type": ["int", "null"], "doc": "ID from 7digital.com or -1"},
+    {"name": "artist_familiarity", "type": ["double", "null"], "doc": "Artist recognition"},
+    {"name": "artist_hotttnesss", "type": ["double", "null"], "doc": "Artist popularity"},
+    {"name": "artist_latitude", "type": ["double", "null"]},
+    {"name": "artist_longitude", "type": ["double", "null"]},
+    {"name": "artist_playmeid", "type": ["int", "null"], "doc": "ID from playme.com, or -1"},
+    {"name": "release_7digitalid", "type": ["int", "null"], "doc": "ID from 7digital.com or -1"},
+    {"name": "song_hotttnesss", "type": ["double", "null"], "doc": "0-1 popularity score"},
+    {"name": "track_7digitalid", "type": ["int", "null"], "doc": ""},
+
+    // "/musicbrainz/songs"
+    {"name": "year", "type": ["int", "null"], "doc": "Release year (nullable)"}
+  ]
+}
