@@ -1,0 +1,5 @@
+*.avro
+*.out
+*.class
+slides/img/*.jpg
+poster/img/*.jpg
